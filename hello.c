@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -22,7 +21,7 @@ bool Hello_create(const char *name, Hello_T *hello) {
 bool Hello_sayHello(const Hello_T *hello, char *out, size_t out_len) {
     size_t len = strlen(hello->name) + strlen(kGreeting) + kOverhead;
     if (out_len < len) {
-        return (false);
+        return false;
     }
     snprintf(out, out_len, "%s%s!", kGreeting, hello->name);
     return true;
